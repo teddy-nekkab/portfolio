@@ -126,3 +126,11 @@ footer .social-icons {
   color: #72a1e5;
   border-color: #fff;
 }
+
+.is-form-page {
+  margin-bottom: 9rem;
+}
+
+.is-form-page .container {
+  padding: 0 20px;
+}

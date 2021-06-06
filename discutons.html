@@ -7,37 +7,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"/>
   <title>Teddy Nekkab | Développeur Web</title>
 </head>
 <body>
-  <nav class="navbar is-transparent is-planner animate-fadeDown">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="container">
-      <div class="navbar-brand"></div>
+      <div class="navbar-brand">
+        <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navMenu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+      </div>
       <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start"></div>
         <div class="navbar-end">
-          <div class="navbar-item">
-            <p class="buttons">
-              <a class="button is-medium tooltip is-tooltip-bottom" data-tooltip="Reset" onclick="document.getElementById('form').reset();">
-                <span class="icon is-small"><svg class="svg-inline--fa fa-undo-alt fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="undo-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                  <path fill="currentColor" d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"></path></svg><!-- <i class="fas fa-undo-alt"></i> -->
-                </span>
-              </a>
-              <a class="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="/portfolio-html/"><span class="icon is-small"><svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> --></span>
-              </a>
-            </p>
-          </div>
+          <a class="navbar-item" href="/portfolio/">Mes travaux</a>
+          <div class="navbar-item"><a class="button is-primary is-outlined is-rounded" href="discutons.html">Discutons</a></div>
+          <a class="navbar-item" href="assets/pdf/cv-nekkab-teddy.pdf">Télécharger mon CV</a>
         </div>
       </div>
     </div>
   </nav>
-  <section class="hero is-white has-text-centered">
+  <section class="hero is-white has-text-centered animate__animated animate__fadeInUp">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
           <div class="column">
-            <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Développeur Web</h1>
-            <h2 class="subtitle is-size-4-desktop">Je suis à la recherche constante de nouveaux projets à développer et de nouvelles technologies à découvrir.</h2>
+            <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Que puis-je faire pour vous ?</h1>
           </div>
         </div>
       </div>
@@ -48,14 +43,14 @@
       </div>
     </div>
   </section>
-  <div class="is-form-page animate-fadeUp">
+  <div class="is-form-page animate__animated animate__fadeInUp">
     <section class="is-white">
       <div class="container">
-        <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/4fbdd9e3c86a" method="POST">
+        <form id="form" accept-charset="UTF-8" action="https://usebasin.com/f/4fbdd9e3c86a" method="POST">
           <div class="columns is-centered">
             <div class="column is-half">
               <div class="field">
-                <label class="label">Name</label>
+                <label class="label">Nom</label>
                 <div class="control is-expanded">
                   <input class="input is-large" name="name" type="text" required="">
                 </div>
@@ -63,7 +58,7 @@
             </div>
             <div class="column is-half">
               <div class="field">
-                <label class="label">Email</label>
+                <label class="label">Adresse e-mail</label>
                 <div class="control is-expanded">
                   <input class="input is-large" name="email" type="email" required="">
                 </div>
@@ -90,8 +85,7 @@
             <div class="column is-one-third">
               <div class="field">
                 <div class="control">
-                  <div><div class="grecaptcha-badge" data-style="inline" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s ease 0s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&amp;co=aHR0cHM6Ly9tYXR0ZmFybGV5LmNhOjQ0Mw..&amp;hl=fr&amp;v=CdDdhZfPbLLrfYLBdThNS0-Y&amp;size=invisible&amp;badge=inline&amp;cb=ppwipzkt40uq" width="256" height="60" role="presentation" name="a-z24wsis17zre" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><button class="button is-primary is-outlined is-medium is-fullwidth is-rounded g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-badge="inline">Submit</button>
-                </div>
+                  <button class="button is-primary is-outlined is-medium is-fullwidth is-rounded">Envoyer</button>
               </div>
             </div>
           </div>
@@ -101,16 +95,27 @@
   </div>
   <footer class="section is-primary is-small has-text-centered">
     <div class="container is-narrow">
-      <div class="columns is-centered">
+      <div class="columns is-centered"> 
         <div class="column is-one-third">
           <h1 class="title is-size-4-touch">Vivre, apprendre et progresser jour après jour.</h1>
         </div>
       </div>
       <div class="social-icons">
-        <a class="button is-medium" href="https://www.linkedin.com/in/teddy-nekkab/" rel="noreferrer" target="_blank"><span class="icon is-small"><svg class="svg-inline--fa fa-linkedin-in fa-w-14 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg><i class="fab fa-linkedin-in fa-fw"></i></span></a>
+        <p class="field">
+          <a class="button is-medium" href="https://github.com/teddy-nekkab" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a class="button is-medium" href="mailto:teddy.nekkab@icloud.com">
+            <i class="far fa-envelope"></i>
+          </a>
+          <a class="button is-medium" href="https://www.linkedin.com/in/teddy-nekkab/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </p>
       </div>
     </div>
   </footer>
+  <script src="https://kit.fontawesome.com/d08083cab7.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
