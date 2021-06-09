@@ -7,7 +7,7 @@
 }
 
 .section.is-primary {
-  background-color: #72a1e5;
+  background-color: #636E7C;
   color: #fff;
 }
 
@@ -74,12 +74,12 @@
 
 .button.is-primary.is-outlined {
   background-color: transparent !important;
-  border-color: #72a1e5 !important;
-  color: #72a1e5 !important;
+  border-color: #636E7C !important;
+  color: #636E7C !important;
 }
 
 .button.is-primary.is-outlined:hover {
-  background-color: #72a1e5 !important;
+  background-color: #636E7C !important;
   color: #fff !important;
 }
 
@@ -123,7 +123,7 @@ footer .social-icons {
 
 .navbar.is-planner a.button {
   font-weight: 400;
-  color: #72a1e5;
+  color: #636E7C;
   border-color: #fff;
 }
 
@@ -133,4 +133,8 @@ footer .social-icons {
 
 .is-form-page .container {
   padding: 0 20px;
+}
+
+#gameContainer {
+  background-color:#636E7C;
 }
