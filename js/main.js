@@ -1,25 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(() => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  const $burger = $('.navbar-burger');
+  const $menu = $('.navbar-menu');
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
+  $(document).click((e) => {
+    if(!$burger.is(e.target) && $burger.has(e.target).length === 0 && !$menu.is(e.target) && $menu.has(e.target).length === 0) {
+      $burger.removeClass('is-active');
+      $menu.removeClass('is-active');
+    }
+  });
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
+  $burger.click(() => {
+    $burger.addClass('is-active')
+    $menu.addClass('is-active')
+  });
 });
