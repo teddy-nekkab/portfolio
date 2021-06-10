@@ -73,14 +73,14 @@
 }
 
 .button.is-primary.is-outlined {
-  background-color: transparent !important;
+  background-color: #636E7C !important;
   border-color: #636E7C !important;
-  color: #636E7C !important;
+  color: #fff !important;
 }
 
 .button.is-primary.is-outlined:hover {
-  background-color: #636E7C !important;
-  color: #fff !important;
+  background-color: #fff !important;
+  color: #636E7C !important;
 }
 
 footer .social-icons a.button {
